@@ -22,7 +22,7 @@ const setupTags = recipes => {
     const [firstValue] = a
     const [secondValue] = b
 
-    firstValue.localeCompare(secondValue)
+    return firstValue.localeCompare(secondValue)
   })
 
   return newTags
