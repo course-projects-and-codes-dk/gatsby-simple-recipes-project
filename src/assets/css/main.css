@@ -567,7 +567,7 @@ form > *:last-child {
   padding-bottom: 3rem;
 }
 .tags-container {
-  order: 1;
+  /* order: 1; */
   display: flex;
   flex-direction: column;
   /* background: blue; */
