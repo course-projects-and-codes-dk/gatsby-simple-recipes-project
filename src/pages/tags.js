@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { Link, graphql } from "gatsby"
 import setupTags from "../utils/setupTags"
+import slugify from "slugify"
 
 const Tags = ({
   data: {
@@ -20,8 +21,11 @@ const Tags = ({
             // destrcuture tag array
             const [text, value] = tag
 
+            // slugify the tag
+            const tagSlug = slugify(text, { lower: true })
+
             return (
-              <Link key={index} to={`/${text}`} className="tag">
+              <Link key={index} to={`/tags/${tagSlug}`} className="tag">
                 <h5>{text}</h5>
                 <p>{value} recipe</p>
               </Link>
