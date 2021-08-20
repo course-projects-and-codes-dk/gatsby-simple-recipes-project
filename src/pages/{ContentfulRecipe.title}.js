@@ -1,9 +1,9 @@
 import React from "react"
 
-const RecipeTemplate = () => {
+const RecipeTemplate = props => {
   return (
     <div>
-      <h4>Recipe Template</h4>
+      <h4>{props.params.title}</h4>
     </div>
   )
 }
